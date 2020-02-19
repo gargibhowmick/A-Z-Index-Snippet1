@@ -15,83 +15,83 @@
             <a href="">Documentation</a>
         </div>
         <div class="alphabetDivs">
-            <div class="letterDiv">
-                <a href=""><p>A</p></a>
+            <div class="letterDiv" index="A" onclick="getIndex(this)">
+                <p>A</p>
             </div>
-            <div class="letterDiv">
-                <a href=""><p>B</p></a>
+            <div class="letterDiv" index="B" onclick="getIndex(this)">
+                <p>B</p>
             </div>
-            <div class="letterDiv">
-                <a href=""><p>C</p></a>
+            <div class="letterDiv" index="C" onclick="getIndex(this)">
+                <p>C</p>
             </div>
-            <div class="letterDiv">
-                <a href=""><p>D</p></a>
+            <div class="letterDiv" index="D" onclick="getIndex(this)">
+                <p>D</p>
             </div>
-            <div class="letterDiv">
-                <a href=""><p>E</p></a>
+            <div class="letterDiv" index="E" onclick="getIndex(this)">
+                <p>E</p>
             </div>
-            <div class="letterDiv">
-                <a href=""><p>F</p></a>
+            <div class="letterDiv" index="F" onclick="getIndex(this)">
+                <p>F</p>
             </div>
-            <div class="letterDiv">
-                <a href=""><p>G</p></a>
+            <div class="letterDiv" index="G" onclick="getIndex(this)">
+                <p>G</p>
             </div>
-            <div class="letterDiv">
-                <a href=""><p>H</p></a>
+            <div class="letterDiv" index="H" onclick="getIndex(this)">
+                <p>H</p>
             </div>
-            <div class="letterDiv">
-                <a href=""><p>I</p></a>
+            <div class="letterDiv" index="I" onclick="getIndex(this)">
+                <p>I</p>
             </div>
-            <div class="letterDiv">
-                <a href=""><p>J</p></a>
+            <div class="letterDiv" index="J" onclick="getIndex(this)">
+                <p>J</p>
             </div>
-            <div class="letterDiv">
-                <a href=""><p>K</p></a>
+            <div class="letterDiv" index="K" onclick="getIndex(this)">
+                <p>K</p>
             </div>
-            <div class="letterDiv">
-                <a href=""><p>L</p></a>
+            <div class="letterDiv" index="L" onclick="getIndex(this)">
+                <p>L</p>
             </div>
-            <div class="letterDiv">
-                <a href=""><p>M</p></a>
+            <div class="letterDiv" index="M" onclick="getIndex(this)">
+                <p>M</p>
             </div>
-            <div class="letterDiv">
-                <a href=""><p>N</p></a>
+            <div class="letterDiv" index="N" onclick="getIndex(this)">
+                <p>N</p>
             </div>
-            <div class="letterDiv">
-                <a href=""><p>O</p></a>
+            <div class="letterDiv" index="O" onclick="getIndex(this)">
+                <p>O</p>
             </div>
-            <div class="letterDiv">
-                <a href=""><p>P</p></a>
+            <div class="letterDiv" index="P" onclick="getIndex(this)">
+                <p>P</p>
             </div>
-            <div class="letterDiv">
-                <a href=""><p>Q</p></a>
+            <div class="letterDiv" index="Q" onclick="getIndex(this)">
+                <p>Q</p>
             </div>
-            <div class="letterDiv">
-                <a href=""><p>R</p></a>
+            <div class="letterDiv" index="R" onclick="getIndex(this)">
+                <p>R</p>
             </div>
-            <div class="letterDiv">
-                <a href=""><p>S</p></a>
+            <div class="letterDiv" index="S" onclick="getIndex(this)">
+                <p>S</p>
             </div>
-            <div class="letterDiv">
-                <a href=""><p>T</p></a>
+            <div class="letterDiv" index="T" onclick="getIndex(this)">
+                <p>T</p>
             </div>
-            <div class="letterDiv">
-                <a href=""><p>U</p></a>
+            <div class="letterDiv" index="U" onclick="getIndex(this)">
+                <p>U</p>
             </div>
-            <div class="letterDiv">
-                <a href=""><p>V</p></a>
+            <div class="letterDiv" index="V" onclick="getIndex(this)">
+                <p>V</p>
             </div>
-            <div class="letterDiv">
-                <a href=""><p>W</p></a>
+            <div class="letterDiv" index="W" onclick="getIndex(this)">
+                <p>W</p>
             </div>
-            <div class="letterDiv">
-                <a href=""><p>X</p></a>
+            <div class="letterDiv" index="X" onclick="getIndex(this)">
+                <p>X</p>
             </div>
-            <div class="letterDiv">
-                <a href=""><p>Y</p></a>
+            <div class="letterDiv" index="Y" onclick="getIndex(this)">
+                <p>Y</p>
             </div>
-            <div class="letterDiv">
-                <a href=""><p>Z</p></a>
+            <div class="letterDiv" index="Z" onclick="getIndex(this)">
+                <p>Z</p>
             </div>
         </div>
         <section id="A" class="hidden">
@@ -266,5 +266,11 @@
         </section>
     </div>
     <script src="./src/js/index.js"></script>
+    <script>
+        function getIndex(s){
+        var index = s.getAttribute('index');
+        var section = document.querySelector(`#${index}`);
+        section.scrollIntoView({behavior:'smooth'});
+    }</script>
 </body>
 </html>
