@@ -1,0 +1,93 @@
+.mainContent{
+    align-items: center;
+}
+.introContent{
+    text-align: center;
+}
+
+.alphabetDivs{
+    text-align: center;
+
+    margin-right: 10%;
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(3em, 1fr));
+    grid-column-gap: 1.5em;
+
+    /* flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap; */
+    
+
+
+}
+
+hr{
+
+}
+
+.letterDiv{
+    border-style: solid;
+    border-width: 3px;
+    margin-top: 2em;
+    margin-right: 1em;
+    width: 3em;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-box-shadow: 10px 0px 110px -39px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 0px 110px -39px rgba(0,0,0,0.75);
+    box-shadow: 10px 0px 110px -39px rgba(0,0,0,0.75);
+    transition: background-color 0.5s ease-in-out;  
+}
+
+.letterDiv a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.5s;
+    transition-timing-function: all 0.5s ease-in-out;
+}
+
+.letterDiv:hover a{
+    color: whitesmoke;
+    
+}
+
+.letterDiv:hover{
+    background-color: #D52027;
+}
+
+section{
+    margin: 50px;
+    
+}
+
+
+hr{
+    border: none;
+    border-top: 1px dashed #BEBEBE;
+    text-align: center;
+    overflow: visible;
+}
+
+.section-title{
+   position: relative;
+   width: fit-content;
+   margin: 0 auto;
+   top: 17px;
+   padding: 0 5px;
+   background-color: white;
+   font-style: italic;
+    font-weight: bold;
+    font-size: 1.2em;
+   
+}
+
+.hidden{
+    display: none;
+}
+
+
+
