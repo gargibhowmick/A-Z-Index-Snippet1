@@ -30,6 +30,9 @@ function groupWordsByAlphabeticalOrder(words) {
 
 const getElementById = id => document.getElementById(id);
 
+const getElementByClass = classname => document.getElementByClass(classname);
+
+
 const groupedLetters = words => getAlphabetSections(words);
 
 const getAllAvailableLetters = words => {
@@ -72,7 +75,17 @@ const insertElementsIntoAvailableGroups = words => {
   ))
 };
 
+const removeUngroupedButtons = (lettersToMatch) => {
+  lettersToMatch.forEach(letterMatch => {
+        document.querySelector(`.${letterMatch}`).classList.remove("hidden");
+    })
+}
+
+
 export function startGroupingProcess(words){
+  console.log(getAllAvailableLetters(words));
+
+    removeUngroupedButtons(getAllAvailableLetters(words))
     removeUngroupedElements(words);
     insertElementsIntoAvailableGroups(words);
   }

@@ -1,37 +1,32 @@
+$stonybrook-color:#D52027;
+
 .mainContent{
     align-items: center;
 }
 .introContent{
     text-align: center;
+    margin-right: 5%;
+    margin-left: 5%;
+    
 }
 
 .alphabetDivs{
     text-align: center;
-
-    margin-right: 10%;
-    margin-left: 10%;
+    margin-right: 7%;
+    margin-left: 7%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(3em, 1fr));
-    grid-column-gap: 1.5em;
-
-    /* flex-direction: row;
-    justify-content: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap; */
-    
-
-
+    justify-self: center;
+    grid-column-gap: 1em;
 }
 
-hr{
-
-}
 
 .letterDiv{
+    margin-top: 1em;
+   margin-bottom: 1em;
     border-style: solid;
     border-width: 3px;
-    margin-top: 2em;
-    margin-right: 1em;
+    margin-right: 0.5em;
     width: 3em;
     background-color: whitesmoke;
     border-radius: 50%;
@@ -40,49 +35,62 @@ hr{
     -moz-box-shadow: 10px 0px 110px -39px rgba(0,0,0,0.75);
     box-shadow: 10px 0px 110px -39px rgba(0,0,0,0.75);
     transition: background-color 0.5s ease-in-out;  
+    justify-self: center;
+    p{
+        font-size: 0.9em;
+        font-weight: bold;
+    }
 }
 
-.letterDiv a{
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    transition: color 0.5s;
-    transition-timing-function: all 0.5s ease-in-out;
+.letterDiv p{
+    transition: color 0.5s ease-in-out;  
+
 }
 
-.letterDiv:hover a{
-    color: whitesmoke;
+
+.letterDiv:hover p{
+    color: white;
     
 }
 
 .letterDiv:hover{
-    background-color: #D52027;
+    background-color: $stonybrook-color;
 }
+
 
 section{
+    height: max-content;
     margin: 50px;
-    
+    background-color:$stonybrook-color;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    margin-bottom: 2em;
+    color: white;
+    -webkit-box-shadow: 2px 1px 48px -25px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 1px 48px -25px rgba(0,0,0,0.75);
+    box-shadow: 2px 1px 48px -25px rgba(0,0,0,0.75);
+    margin-right: 10%;
+    margin-left: 10%;
+
+    li{
+        margin-left: 2em;
+    }
 }
 
 
-hr{
-    border: none;
-    border-top: 1px dashed #BEBEBE;
-    text-align: center;
-    overflow: visible;
-}
 
 .section-title{
-   position: relative;
-   width: fit-content;
-   margin: 0 auto;
-   top: 17px;
-   padding: 0 5px;
-   background-color: white;
+    color: black;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    top: 1.1em;
    font-style: italic;
     font-weight: bold;
-    font-size: 1.2em;
-   
+    font-size: 1.5em;
+    color: white;
+    padding-top: 0.5em;
+ 
 }
 
 .hidden{

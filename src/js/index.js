@@ -1,8 +1,66 @@
 import { startGroupingProcess } from "./groupLetters";
+import smoothscroll from "smoothscroll-polyfill";
 
-const words = ["John", "Yellow Green", "Golly","Apple", "Hammy", "Another", "Alien"];
+smoothscroll.polyfill();
+
+const words = [
+  "John",
+  "Yellow Green",
+  "Golly",
+  "Apple",
+  "Hammy",
+  "Another",
+  "Alien",
+  "SHaq",
+  "Popsmoke",
+  "SPomnngebob",
+  "row",
+  "roll",
+  "loops",
+  "dell",
+  "java",
+  "environment",
+  "powerful",
+  "machinery",
+  "meet",
+  "pilot",
+  "rough",
+  "rear",
+  "purpose",
+  "upon",
+  "winter",
+  "scientist",
+  "purple",
+  "short",
+  "language",
+  "factory",
+  "till",
+  "fight",
+  "shot",
+  "yes",
+  "needed",
+  "giving",
+  "wonder",
+  "zoo",
+  "tape",
+  "development",
+  "faster",
+  "usually",
+  "loud",
+  "shallow",
+  "harbor",
+  "parent",
+  "cutting",
+  "fair",
+  "ground",
+  "kill",
+  "island",
+  "buried",
+  "whose",
+  "shown",
+  "fall",
+  "save",
+  "rising"
+];
 
 startGroupingProcess(words);
-
-
-
