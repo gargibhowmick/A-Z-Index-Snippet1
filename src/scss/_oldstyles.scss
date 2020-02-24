@@ -1,4 +1,4 @@
-$stonybrook-color:#D52027;
+$stonybrook-color:#990000;
 
 .mainContent{
     align-items: center;
@@ -61,14 +61,11 @@ $stonybrook-color:#D52027;
 section{
     height: max-content;
     margin: 50px;
-    background-color:$stonybrook-color;
     padding-top: 0.3em;
     padding-bottom: 0.3em;
     margin-bottom: 2em;
-    color: white;
-    -webkit-box-shadow: 2px 1px 48px -25px rgba(0,0,0,0.75);
-    -moz-box-shadow: 2px 1px 48px -25px rgba(0,0,0,0.75);
-    box-shadow: 2px 1px 48px -25px rgba(0,0,0,0.75);
+    color: black;
+    
     margin-right: 10%;
     margin-left: 10%;
 
@@ -80,16 +77,17 @@ section{
 
 
 .section-title{
-    color: black;
+    color: white;
     text-align: center;
-    width: fit-content;
+    width: 100%;
     margin: 0 auto;
-    top: 1.1em;
    font-style: italic;
     font-weight: bold;
     font-size: 1.5em;
     color: white;
-    padding-top: 0.5em;
+    background-color: $stonybrook-color;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
  
 }
 
