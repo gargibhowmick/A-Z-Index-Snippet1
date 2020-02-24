@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="mainContent">
+        <div class="topButton" onclick="topPage()"><span></span></div>
         <div class="introContent">
             <h1>Alpha Index</h1>
             <p>The Alpha index allows you to create an alphabetical index of content with an A-Z menu at the top.
@@ -247,6 +248,24 @@
         var section = document.querySelector(`#${index}`);
         section.scrollIntoView({behavior:'smooth'});
     } 
+    function topPage(){
+            window.scrollTo({top:0, behavior: 'smooth'});
+        }
+
+        var scrollY = 0;
+        var button = document.querySelector('.topButton');
+
+        function showButton(){
+            var y = window.pageYOffset;
+            if( y >= 100){
+                button.classList.add('show');
+            }
+            else{
+                button.classList.remove('show');
+            }
+           
+        }
+        window.addEventListener('scroll', showButton);
     </script>
 </body>
 </html>
