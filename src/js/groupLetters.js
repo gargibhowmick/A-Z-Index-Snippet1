@@ -30,8 +30,6 @@ function groupWordsByAlphabeticalOrder(words) {
 
 const getElementById = id => document.getElementById(id);
 
-const getElementByClass = classname => document.getElementByClass(classname);
-
 
 const groupedLetters = words => getAlphabetSections(words);
 
@@ -82,13 +80,15 @@ const removeUngroupedButtons = (lettersToMatch) => {
 }
 
 
-export function startGroupingProcess(words){
-  console.log(getAllAvailableLetters(words));
 
+
+
+
+export function startGroupingProcess(words){
     removeUngroupedButtons(getAllAvailableLetters(words))
     removeUngroupedElements(words);
     insertElementsIntoAvailableGroups(words);
   }
 
 
-
+console.log();
