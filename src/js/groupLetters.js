@@ -1,8 +1,11 @@
 import {
   groupWordsWithNumberAsFirstElement,
   revealNumberElements,
-  insertNumberElements
+  insertNumberElements,
+  revealElements
 } from "./groupNumbers";
+
+import { groupWordsWithSpecialChar,insertSpecialElements} from "./groupSpecialCharacters";
 
 const pipe = (...fns) => x => fns.reduce((v, f) => f(v), x);
 
@@ -89,16 +92,34 @@ export const removeUngroupedButtons = matchedLetters => {
 };
 
 export function startGroupingProcess(words) {
+//Letter Grouping
+  var lettersRegex = /^[a-zA-Z]+$/;
+
   const filterUnwantedCharacters = words.filter(matchedContent =>
-    isNaN(matchedContent[0])
+    lettersRegex.test(matchedContent)
   );
+
   removeUngroupedButtons(getAllAvailableLetters(filterUnwantedCharacters));
   removeUngroupedElements(filterUnwantedCharacters);
   insertElementsIntoAvailableGroups(filterUnwantedCharacters);
+//Number Grouping
   revealNumberElements(
     words.filter(matchedContent => !isNaN(matchedContent[0]))
   );
   insertNumberElements(
     words.filter(matchedContent => !isNaN(matchedContent[0]))
   );
+//Special Char grouping 
+
+
+
+
+if (groupWordsWithSpecialChar(words).length > 0) {
+    revealElements("#special",".specialchar")
+    insertSpecialElements(groupWordsWithSpecialChar(words));
+}
+
+
+
+
 }

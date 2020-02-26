@@ -4,6 +4,11 @@ import smoothscroll from "smoothscroll-polyfill";
 smoothscroll.polyfill();
 
 export const wordArray = [
+  "*@*#*hello",
+  "@#Iamcool",
+    "$",
+    "/sss",
+    ")(l",
   "345t",
   "233er",
   "404s",

@@ -11,7 +11,7 @@ export const revealNumberElements = words => {
   if (words.length > 0) revealElements(".number", "#numberGroup");
 };
 
-const revealElements = (...elementsToRemove) => {
+export const revealElements = (...elementsToRemove) => {
   elementsToRemove.forEach(element => revealElement(element));
 };
 
