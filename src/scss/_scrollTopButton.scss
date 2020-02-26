@@ -4,9 +4,6 @@ $stonybrook-color: #990000;
 
 .topButton {
 	opacity: 0;
-	display: flex;
-    justify-content: center;
-	align-content: center;
 	position: fixed;
 	height: 45px;
 	width: 45px;
@@ -18,7 +15,7 @@ $stonybrook-color: #990000;
 	-moz-box-shadow: 2px 1px 48px -25px rgba(0, 0, 0, 0.75);
 	box-shadow: 2px 1px 48px -25px rgba(0, 0, 0, 0.75);
 	-o-box-shadow: 2px 1px 48px -25px rgba(0, 0, 0, 0.75);
-	cursor: pointer;
+	pointer-events: none;
 	color: whitesmoke;
 	text-align: center;
 	transition: opacity 0.2s ease-in-out;
@@ -37,5 +34,10 @@ $stonybrook-color: #990000;
 
 .show {
 	opacity: 1;
+	display: flex;
+    justify-content: center;
+	align-content: center;
 	transition: opacity 0.5s ease-in-out;
+	pointer-events: all;
+	cursor: pointer;
 }
