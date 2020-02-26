@@ -1,3 +1,8 @@
+import {
+  groupWordsWithNumberAsFirstElement,
+  revealNumberElements,
+  insertNumberElements
+} from "./groupNumbers";
 
 const pipe = (...fns) => x => fns.reduce((v, f) => f(v), x);
 
@@ -28,8 +33,7 @@ function groupWordsByAlphabeticalOrder(words) {
   }, {});
 }
 
-const getElementById = id => document.getElementById(id);
-
+export const getElementById = id => document.getElementById(id);
 
 const groupedLetters = words => getAlphabetSections(words);
 
@@ -57,38 +61,44 @@ const constructListHtml = words => {
 };
 
 const removeUngroupedElements = words => {
-  getAllAvailableLetters(words).forEach(letter =>
-    getElementById(letter).classList.remove("hidden")
-  );
+  getAllAvailableLetters(words).forEach(letter => {
+    getElementById(letter).classList.remove("hidden");
+  });
 };
 
-
-const arrayToString = (index,words) => constructListHtml(words)[index].toString().replace(new RegExp(",","g"),"");
+export const arrayToString = (index, words) =>
+  constructListHtml(words)
+    [index].toString()
+    .replace(new RegExp(",", "g"), "");
 
 const insertElementsIntoAvailableGroups = words => {
   let i = 0;
   getAllAvailableLetters(words).forEach(
     letter =>
-      (getElementById(letter).lastElementChild.innerHTML = arrayToString(i++,words)
-  ))
+      (getElementById(letter).lastElementChild.innerHTML = arrayToString(
+        i++,
+        words
+      ))
+  );
 };
 
-const removeUngroupedButtons = (lettersToMatch) => {
-  lettersToMatch.forEach(letterMatch => {
-        document.querySelector(`.${letterMatch}`).classList.remove("hidden");
-    })
+export const removeUngroupedButtons = matchedLetters => {
+  matchedLetters.forEach(letterMatch => {
+    document.querySelector(`.${letterMatch}`).classList.remove("hidden");
+  });
+};
+
+export function startGroupingProcess(words) {
+  const filterUnwantedCharacters = words.filter(matchedContent =>
+    isNaN(matchedContent[0])
+  );
+  removeUngroupedButtons(getAllAvailableLetters(filterUnwantedCharacters));
+  removeUngroupedElements(filterUnwantedCharacters);
+  insertElementsIntoAvailableGroups(filterUnwantedCharacters);
+  revealNumberElements(
+    words.filter(matchedContent => !isNaN(matchedContent[0]))
+  );
+  insertNumberElements(
+    words.filter(matchedContent => !isNaN(matchedContent[0]))
+  );
 }
-
-
-
-
-
-
-export function startGroupingProcess(words){
-    removeUngroupedButtons(getAllAvailableLetters(words))
-    removeUngroupedElements(words);
-    insertElementsIntoAvailableGroups(words);
-  }
-
-
-console.log();
