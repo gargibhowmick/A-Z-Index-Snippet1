@@ -1,0 +1,37 @@
+$stonybrook-color: #990000;
+
+
+
+.topButton {
+	display: none;
+	position: fixed;
+	height: 45px;
+	width: 45px;
+	border-radius: 50%;
+	background-color: black;
+	bottom: 40px;
+	right: 15px;
+	-webkit-box-shadow: 2px 1px 48px -25px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 2px 1px 48px -25px rgba(0, 0, 0, 0.75);
+	box-shadow: 2px 1px 48px -25px rgba(0, 0, 0, 0.75);
+	-o-box-shadow: 2px 1px 48px -25px rgba(0, 0, 0, 0.75);
+	cursor: pointer;
+	color: whitesmoke;
+	text-align: center;
+
+	&:hover {
+		background-color: $stonybrook-color;
+	}
+
+	span {
+		position: relative;
+		top: 7px;
+		font-size: 20px;
+	}
+}
+
+.show {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
