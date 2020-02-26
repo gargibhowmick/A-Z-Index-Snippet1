@@ -10,10 +10,18 @@ $stonybrook-color: #990000;
 	text-align: center;
 	margin-right: 5%;
 	margin-left: 5%;
+	p{
+		margin-bottom: 2em;
+	}
+	a{
+		text-decoration: none;
+		color: $stonybrook-color;
+	}
 }
 
 .alphabetDivs {
 	text-align: center;
+	margin-top: 2.5em;
 	margin-right: 7%;
 	margin-left: 7%;
 	display: grid;

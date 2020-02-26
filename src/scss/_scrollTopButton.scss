@@ -3,7 +3,10 @@ $stonybrook-color: #990000;
 
 
 .topButton {
-	display: none;
+	opacity: 0;
+	display: flex;
+    justify-content: center;
+	align-content: center;
 	position: fixed;
 	height: 45px;
 	width: 45px;
@@ -18,6 +21,7 @@ $stonybrook-color: #990000;
 	cursor: pointer;
 	color: whitesmoke;
 	text-align: center;
+	transition: opacity 0.2s ease-in-out;
 
 	&:hover {
 		background-color: $stonybrook-color;
@@ -25,13 +29,13 @@ $stonybrook-color: #990000;
 
 	span {
 		position: relative;
-		top: 7px;
+		top: 9px;
 		font-size: 20px;
 	}
+	
 }
 
 .show {
-    display: flex;
-    justify-content: center;
-    align-content: center;
+	opacity: 1;
+	transition: opacity 0.5s ease-in-out;
 }
