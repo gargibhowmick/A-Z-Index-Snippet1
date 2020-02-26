@@ -1,125 +1,122 @@
-$stonybrook-color:#990000;
+$stonybrook-color: #990000;
 
-.mainContent{
-    align-items: center;
+.mainContent {
+	align-items: center;
 }
 
-.topButton{
-    display: none;
-    position: fixed;
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    background-color: black;
-    bottom: 40px;
-    right: 40px;
-    -webkit-box-shadow: 2px 1px 48px -25px rgba(0,0,0,0.75);
-    -moz-box-shadow: 2px 1px 48px -25px rgba(0,0,0,0.75);
-    box-shadow: 2px 1px 48px -25px rgba(0,0,0,0.75);
-    -o-box-shadow: 2px 1px 48px -25px rgba(0,0,0,0.75);
-    
-    color: whitesmoke;
-    text-align: center;
-    span{
-      font-size: 0.8em;
-    }
+.topButton {
+	display: none;
+	position: fixed;
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	background-color: black;
+	bottom: 40px;
+	right: 40px;
+	-webkit-box-shadow: 2px 1px 48px -25px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 2px 1px 48px -25px rgba(0, 0, 0, 0.75);
+	box-shadow: 2px 1px 48px -25px rgba(0, 0, 0, 0.75);
+	-o-box-shadow: 2px 1px 48px -25px rgba(0, 0, 0, 0.75);
+	cursor: pointer;
+	color: whitesmoke;
+	text-align: center;
+
+	&:hover {
+		background-color: $stonybrook-color;
+	}
+
+	span {
+		position: relative;
+		top: 7px;
+		font-size: 20px;
+	}
 }
 
-.show{
-    display: block;
+.show {
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
-.introContent{
-    text-align: center;
-    margin-right: 5%;
-    margin-left: 5%;
-    
+.introContent {
+	text-align: center;
+	margin-right: 5%;
+	margin-left: 5%;
 }
 
-.alphabetDivs{
-    text-align: center;
-    margin-right: 7%;
-    margin-left: 7%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(3em, 1fr));
-    justify-self: center;
-    grid-column-gap: 1em;
+.alphabetDivs {
+	text-align: center;
+	margin-right: 7%;
+	margin-left: 7%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(3em, 1fr));
+	justify-self: center;
+	grid-column-gap: 1em;
 }
 
-
-.letterDiv{
-    margin-top: 1em;
-   margin-bottom: 1em;
-    border-style: solid;
-    border-width: 3px;
-    margin-right: 0.5em;
-    width: 3em;
-    background-color: whitesmoke;
-    border-radius: 50%;
-    cursor: pointer;
-    -webkit-box-shadow: 10px 0px 110px -39px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 0px 110px -39px rgba(0,0,0,0.75);
-    box-shadow: 10px 0px 110px -39px rgba(0,0,0,0.75);
-    transition: background-color 0.5s ease-in-out;  
-    justify-self: center;
-    p{
-        font-size: 0.9em;
-        font-weight: bold;
-    }
+.letterDiv {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	border-style: solid;
+	border-width: 0px;
+	margin-right: 0.5em;
+	width: 3em;
+	background-color: #ededed;
+	border-radius: 50%;
+	cursor: pointer;
+	-webkit-box-shadow: 10px 0px 110px -39px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 10px 0px 110px -39px rgba(0, 0, 0, 0.75);
+	box-shadow: 10px 0px 110px -39px rgba(0, 0, 0, 0.75);
+	transition: background-color 0.5s ease-in-out;
+	justify-self: center;
+	p {
+		font-size: 0.9em;
+		font-weight: bold;
+	}
 }
 
-.letterDiv p{
-    transition: color 0.5s ease-in-out;  
-
+.letterDiv p {
+	transition: color 0.5s ease-in-out;
 }
 
-
-.letterDiv:hover p{
-    color: white;
-    
+.letterDiv:hover p {
+	color: white;
 }
 
-.letterDiv:hover{
-    background-color: $stonybrook-color;
+.letterDiv:hover {
+	background-color: $stonybrook-color;
 }
 
+section {
+	height: max-content;
+	margin: 50px;
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+	margin-bottom: 2em;
+	color: black;
 
-section{
-    height: max-content;
-    margin: 50px;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-    margin-bottom: 2em;
-    color: black;
-    
-    margin-right: 10%;
-    margin-left: 10%;
+	margin-right: 10%;
+	margin-left: 10%;
 
-    li{
-        margin-left: 2em;
-    }
+	li {
+		margin-left: 2em;
+	}
 }
 
-
-
-.section-title{
-    color: white;
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-   font-style: italic;
-    font-weight: bold;
-    font-size: 1.5em;
-    color: white;
-    background-color: $stonybrook-color;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
- 
+.section-title {
+	color: white;
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 1.5em;
+	color: white;
+	background-color: $stonybrook-color;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
 }
 
-.hidden{
-    display: none;
+.hidden {
+	display: none;
 }
-
-
-
