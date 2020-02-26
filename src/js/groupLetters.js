@@ -92,34 +92,28 @@ export const removeUngroupedButtons = matchedLetters => {
 };
 
 export function startGroupingProcess(words) {
-//Letter Grouping
+  groupLetters(words);
+  groupNumbers(words);
+  groupSpecialChars(words);
+}
+
+function groupSpecialChars(words) {
+  if (groupWordsWithSpecialChar(words).length > 0) {
+    revealElements("#special", ".specialchar");
+    insertSpecialElements(groupWordsWithSpecialChar(words));
+  }
+}
+
+function groupLetters(words) {
   var lettersRegex = /^[a-zA-Z]+$/;
-
-  const filterUnwantedCharacters = words.filter(matchedContent =>
-    lettersRegex.test(matchedContent)
-  );
-
+  const filterUnwantedCharacters = words.filter(matchedContent => lettersRegex.test(matchedContent));
   removeUngroupedButtons(getAllAvailableLetters(filterUnwantedCharacters));
   removeUngroupedElements(filterUnwantedCharacters);
   insertElementsIntoAvailableGroups(filterUnwantedCharacters);
-//Number Grouping
-  revealNumberElements(
-    words.filter(matchedContent => !isNaN(matchedContent[0]))
-  );
-  insertNumberElements(
-    words.filter(matchedContent => !isNaN(matchedContent[0]))
-  );
-//Special Char grouping 
-
-
-
-
-if (groupWordsWithSpecialChar(words).length > 0) {
-    revealElements("#special",".specialchar")
-    insertSpecialElements(groupWordsWithSpecialChar(words));
 }
 
-
-
-
+function groupNumbers(words) {
+  revealNumberElements(words.filter(matchedContent => !isNaN(matchedContent[0])));
+  insertNumberElements(words.filter(matchedContent => !isNaN(matchedContent[0])));
 }
+
