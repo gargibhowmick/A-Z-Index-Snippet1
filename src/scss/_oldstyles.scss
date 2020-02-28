@@ -2,7 +2,7 @@ $stonybrook-color: #990000;
 
 .mainContent {
 	align-items: center;
-}
+
 
 
 
@@ -62,7 +62,6 @@ $stonybrook-color: #990000;
 .letterDiv:hover {
 	background-color: $stonybrook-color;
 }
-
 section {
 	height: max-content;
 	margin: 50px;
@@ -73,11 +72,14 @@ section {
 
 	margin-right: 10%;
 	margin-left: 10%;
+	margin-bottom: 2em;
 
 	li {
-		margin-left: 2em;
+		margin-left: 4em;
+		
 	}
 }
+
 
 .section-title {
 	color: white;
@@ -95,4 +97,6 @@ section {
 
 .hidden {
 	display: none;
+}
+
 }

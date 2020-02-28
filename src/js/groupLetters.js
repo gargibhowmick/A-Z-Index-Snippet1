@@ -85,7 +85,7 @@ const insertElementsIntoAvailableGroups = words => {
   );
 };
 
-export const removeUngroupedButtons = matchedLetters => {
+export const revealGroupedButtons = matchedLetters => {
   matchedLetters.forEach(letterMatch => {
     document.querySelector(`.${letterMatch}`).classList.remove("hidden");
   });
@@ -107,13 +107,16 @@ function groupSpecialChars(words) {
 function groupLetters(words) {
   var lettersRegex = /^[a-zA-Z]+$/;
   const filterUnwantedCharacters = words.filter(matchedContent => lettersRegex.test(matchedContent));
-  removeUngroupedButtons(getAllAvailableLetters(filterUnwantedCharacters));
+  revealGroupedButtons(getAllAvailableLetters(filterUnwantedCharacters));
   removeUngroupedElements(filterUnwantedCharacters);
   insertElementsIntoAvailableGroups(filterUnwantedCharacters);
 }
 
 function groupNumbers(words) {
-  revealNumberElements(words.filter(matchedContent => !isNaN(matchedContent[0])));
-  insertNumberElements(words.filter(matchedContent => !isNaN(matchedContent[0])));
+  revealNumberElements(filterNumbers(words));
+  insertNumberElements(filterNumbers(words));
 }
+
+const filterNumbers = (words) => words.filter(matchedContent => !isNaN(matchedContent[0]));
+
 
