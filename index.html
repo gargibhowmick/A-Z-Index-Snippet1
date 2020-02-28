@@ -270,7 +270,7 @@
         function getIndex(s){
         var index = s.getAttribute('index');
         var section = document.querySelector(`#${index}`);
-        section.scrollIntoView({behavior:'smooth'});
+        section.scrollIntoView({behavior:'smooth', block:"center"});
     } 
     function topPage(){
             window.scrollTo({top:0, behavior: 'smooth'});
