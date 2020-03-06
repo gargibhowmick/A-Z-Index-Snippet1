@@ -74,8 +74,11 @@ section {
 	margin-left: 10%;
 	margin-bottom: 2em;
 
+	
+
 	li {
-		margin-left: 4em;
+		// margin-left: 4em;
+		margin-bottom: 1.5em;
 		
 	}
 
@@ -100,4 +103,9 @@ section {
 	display: none;
 }
 
+}
+.doubleColumn{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	
 }
