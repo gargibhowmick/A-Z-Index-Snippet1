@@ -3,61 +3,10 @@ import smoothscroll from "smoothscroll-polyfill";
 
 smoothscroll.polyfill();
 
-export const wordArray = [
-  "*@*#*hello",
-  "@#Iamcool",
-    "$",
-    "/sss",
-    ")(l",
-  "345t",
-  "233er",
-  "404s",
-  "0233ert",
-  "0123df",
-  "erer",
-  "driven",
-  "bee",
-  "believed",
-  "its",
-  "ground",
-  "strike",
-  "although",
-  "although",
-  "glad",
-  "eager",
-  "forgot",
-  "product",
-  "type",
-  "home",
-  "instance",
-  "far",
-  "rabbit",
-  "hour",
-  "thus",
-  "scientific",
-  "yesterday",
-  "simply",
-  "card",
-  "shut",
-  "stream",
-  "familiar",
-  "excitement",
-  "himself",
-  "struggle",
-  "lady",
-  "think",
-  "felt",
-  "minute",
-  "single",
-  "ring",
-  "stems",
-  "dot",
-  "bus",
-  "unit",
-  "skin",
-  "attack",
-  "wolf"
-];
-
+const wordArray = [
+  `Tuesdays schedule I am so cool and awesome
+  sss this is awesome. sdksd;lkdsl;kdsdkl;sdlk;sd
+  sdml;msd;mdssd;lm sdml;smldsdml;`
+]
 
 startGroupingProcess(wordArray);

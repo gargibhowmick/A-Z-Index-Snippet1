@@ -5,13 +5,14 @@ import {
   revealElements
 } from "./groupNumbers";
 
-import { groupWordsWithSpecialChar,insertSpecialElements} from "./groupSpecialCharacters";
+import { groupWordsWithSpecialChar,insertSpecialElements,doubleColumn} from "./groupSpecialCharacters";
 
 const pipe = (...fns) => x => fns.reduce((v, f) => f(v), x);
 
 const trimWhiteSpace = wordArray => wordArray.map(word => word.trim());
 
 const sortAlphabetOrder = wordArray => wordArray.sort();
+
 
 const getAlphabetSections = words => {
   if (words.length === 0) return [];
@@ -74,16 +75,28 @@ export const arrayToString = (index, words) =>
     [index].toString()
     .replace(new RegExp(",", "g"), "");
 
+
 const insertElementsIntoAvailableGroups = words => {
   let i = 0;
   getAllAvailableLetters(words).forEach(
     letter =>
-      (getElementById(letter).lastElementChild.innerHTML = arrayToString(
+      getElementById(letter).lastElementChild.innerHTML = arrayToString(
         i++,
         words
-      ))
+      )
   );
 };
+
+const doubleColumnLetters = words => {
+  getAllAvailableLetters(words.forEach(
+    letter => 
+    doubleColumn(letter)
+  ))
+}
+
+
+// const doubleColumn = elementId => getElementById(elementId).classList.add("doubleColumn");
+
 
 export const revealGroupedButtons = matchedLetters => {
   matchedLetters.forEach(letterMatch => {
@@ -105,7 +118,8 @@ function groupSpecialChars(words) {
 }
 
 function groupLetters(words) {
-  var lettersRegex = /^[a-zA-Z]+$/;
+  var lettersRegex = /^[a-zA-Z][a-zA-Z0-9\W ]+$/;
+
   const filterUnwantedCharacters = words.filter(matchedContent => lettersRegex.test(matchedContent));
   revealGroupedButtons(getAllAvailableLetters(filterUnwantedCharacters));
   removeUngroupedElements(filterUnwantedCharacters);

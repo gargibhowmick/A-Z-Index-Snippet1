@@ -5,7 +5,7 @@ export const groupWordsWithSpecialChar = words => {
   const specialCharRegex = /\W|_/g;
 
 
-  return words.filter(word => specialCharRegex.test(word));
+  return words.filter(word => specialCharRegex.test(word[0]));
 };
 
 
@@ -16,4 +16,8 @@ export const insertSpecialElements = words => {
   }
 
   getElementById("special").lastElementChild.innerHTML = string;
+}
+
+export const doubleColumn = elementId => {
+  getElementById(elementId).classList.add("doublecolumn");
 }
